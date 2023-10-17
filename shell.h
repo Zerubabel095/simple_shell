@@ -10,6 +10,7 @@
 
 int main(void);
 int shell(void);
+int path(void);
 
 #endif
 
