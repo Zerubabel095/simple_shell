@@ -9,6 +9,7 @@
 #include <sys/wait.h>
 
 int main(void);
+int shell(void);
 
 #endif
 
