@@ -1,13 +1,12 @@
 #include "shell.h"
 
 #define MAX_INPUT 1024
+char input[MAX_INPUT];
+char *args[2];
+pid_t pid;
 
 int main(void)
 {
-    char input[MAX_INPUT];
-    char *args[2];
-    pid_t pid;
-
 
     while (1) {
         printf("$ ");
@@ -39,4 +38,3 @@ int main(void)
 
     return 0;
 }
-
