@@ -11,6 +11,12 @@
 int main(void);
 int shell(void);
 int path(void);
+void exit_shell(void);
+int execute_line(char* line);
+char* get_line(void);
+int exit_main();
+char* get_line();
+void execute_command(char **args);
 
 #endif
 
