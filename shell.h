@@ -17,6 +17,9 @@ char* get_line(void);
 int exit_main();
 char* get_line();
 void execute_command(char **args);
+extern char **environ;
+void print_env(void);
+int execute_lines();
 
 #endif
 
