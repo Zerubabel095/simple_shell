@@ -1,34 +1,21 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include "shell.h"
+#include <unistd.h>
 
-char **env;
-int strcmp(const char *s1, const char *s2);
-extern char **environ;
-
-void print_env(void)
+/**
+ * environment - prints the environment
+ *
+ * Return: 0
+ */
+void environment(void)
 {
-    env = environ;
-    while (*env) {
-        printf("%s\n", *env);
-        env++;
-    }
-}
-int execute_lines()
-{
-    char *args[100];
-    args[0] = "";
+	int i = 0;
+	char **env = environ;
 
-    if (args[0] == NULL){
-      return 1;
-    }	    
-
-    if (strcmp(args[0], "exit") == 0) {
-        return 0;
-    } else if (strcmp(args[0], "env") == 0) {
-        print_env();
-        return 1;
-    }
-
-    return 0;
+	while (env[i])
+	{
+		write(STDOUT_FILENO, (const void *)env[i], _strlen(env[i]));
+            	write(STDOUT_FILENO, "\n", 1);
+		i++;
+	}
 }
 
