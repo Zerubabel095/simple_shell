@@ -1,11 +1,11 @@
 #include "shell.h"
 /**
-* shell_main - read, execute and print 
+* main - read, execute and print 
 * 
 * Return: 0
 */
 
-int shell_main(int argc, char **argv, char *envn[])
+int main(int argc, char **argv, char *envn[])
 {
 	char *input = NULL; 
 	char *path_command = NULL; 

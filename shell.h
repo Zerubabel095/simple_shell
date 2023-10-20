@@ -11,7 +11,6 @@
 #include <sys/types.h>
 #include <sys/wait.h>
 
-int shell_main();
 char *path_finder(void);
 void exit_shell(char **command_args, char *input);
 void buffer_free(char **buf);
